@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(rgb(35, 204, 207), rgb(255, 100, 234));
+    background-attachment: fixed;   
+    font-family: livvic;
+}
+
+h1 {
+    color: rgb(255, 190, 240);
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-top: 0%;
+}
+
+h3 {
+    color: rgb(255, 190, 240);
+    text-align: center;
+    font-size: 1.7em;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+ol,ul {
+    color: white;
+    font-size: 1.2em;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+div {
+    text-align: center;
+}
+
+
+a:link, a:visited {
+    color: rgb(136, 255, 136);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vh;
+    height: 5vh;
+    margin-bottom: 3vh;
+    font-size: 1.2em;
+}
+
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10vh;
+    height: 4vh;
+    border: solid;
+    border-radius: 30%;
+    font-size: 1.2em;
+    text-align: center;
+}
