@@ -60,6 +60,20 @@ function check() {
         document.getElementById('input').value = '';
         newTask();
     } else {
-        document.getElementById('result').innerText = `Oops! The correct form is ${target}. Type it correctly to proceed.`;
+        if (target.length > 1) {
+            document.getElementById('result').innerHTML = 'Oops! The correct forms are ';
+            
+            for (let i = 0; i < target.length; i++) {
+                document.getElementById('result').innerHTML += target[i];
+
+                if (i < target.length - 1) {
+                    document.getElementById('result').innerHTML += ' or ';
+                } else {
+                    document.getElementById('result').innerHTML += '. Type one correctly to proceed.';
+                }
+            }
+        } else {
+            document.getElementById('result').innerText = `Oops! The correct form is ${target}. Type it correctly to proceed.`;
+        }
     }
 }
