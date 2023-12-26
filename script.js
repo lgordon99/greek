@@ -24,21 +24,20 @@ function initiate() {
     .then(data => {
         verbData = data;
         adjustFontSize();
+        window.addEventListener('resize', adjustFontSize);
         listenForEnter();
         newTask();
     });
 }
 
 function adjustFontSize() {
-    window.addEventListener('resize', function() {
-        let input = document.querySelector('input');
-        let inputHeight = input.offsetHeight;
-        input.style.fontSize = 0.5 * inputHeight + 'px';    
+    let input = document.querySelector('input');
+    let inputHeight = input.offsetHeight;
+    input.style.fontSize = 0.5 * inputHeight + 'px';    
 
-        let button = document.querySelector('button');
-        let buttonHeight = button.offsetHeight;
-        button.style.fontSize = 0.6 * buttonHeight + 'px';    
-    });
+    let button = document.querySelector('button');
+    let buttonHeight = button.offsetHeight;
+    button.style.fontSize = 0.6 * buttonHeight + 'px';    
 }
 
 function listenForEnter() {
