@@ -18,14 +18,26 @@ let tense = -1;
 let subject = -1;
 let verbData = [];
 
-
 function initiate() {
     fetch('greek-verbs.json')
     .then(response => response.json())
     .then(data => {
         verbData = data;
+        adjustFontSize();
         listenForEnter();
         newTask();
+    });
+}
+
+function adjustFontSize() {
+    window.addEventListener('resize', function() {
+        let input = document.querySelector('input');
+        let inputHeight = input.offsetHeight;
+        input.style.fontSize = 0.5 * inputHeight + 'px';    
+
+        let button = document.querySelector('button');
+        let buttonHeight = button.offsetHeight;
+        button.style.fontSize = 0.6 * buttonHeight + 'px';    
     });
 }
 
